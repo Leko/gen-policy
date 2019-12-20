@@ -13,7 +13,7 @@ Disclaimer:
 
 ## Install
 
-```
+```sh
 npm install gen-policy
 ```
 
@@ -21,7 +21,7 @@ npm install gen-policy
 
 To get help, run the following command: `gen-policy --help`
 
-```
+```sh
 gen-policy <entry>
 
 Generate policy
@@ -37,6 +37,21 @@ Options:
                [string] [default: "/Users/leko/.ghq/github.com/Leko/gen-policy"]
   --onerror    Output path            [string] [choices: "exit", "throw", "log"]
   --force, -f  Always override even if output file already exists      [boolean]
+```
+
+### Example
+
+```sh
+$ gen-policy fixtures/simple/entry.js
+The policy file was saved to policy.json.
+To run Node.js with this policy, run the following command:
+
+  $ node --experimental-policy=policy.json --policy-integrity=sha384-7/6sD6FFTZwLUVDFjvmLmnZAGhogAgjd/yVoH4F12zEoNaqDxKiJEErcVmSPNIET fixtures/simple/entry.js
+```
+
+```sh
+$ node --experimental-policy=policy.json --policy-integrity=sha384-7/6sD6FFTZwLUVDFjvmLmnZAGhogAgjd/yVoH4F12zEoNaqDxKiJEErcVmSPNIET fixtures/simple/entry.js
+(node:17686) ExperimentalWarning: Policies are experimental.
 ```
 
 ## Contribution
