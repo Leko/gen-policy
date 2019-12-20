@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`E2E Snapshot: fixtures/simple 1`] = `
+Object {
+  "resources": Object {
+    "../../../package.json": Object {
+      "integrity": "sha384-caD3G/oidzeDBY6lgIcKZcjvTywDHi+LPGICbkMwiJVmtddYYWrCMV4CvkomWDw/",
+    },
+    "../entry.js": Object {
+      "dependencies": Object {
+        "./foo.js": "../foo.js",
+      },
+      "integrity": "sha384-W1P8/wqNVrr0aAOTqbvFaQnbc6EZXHh8Cp1Id0YNOFmG9xVWmovdlBm7BB2vVFgW",
+    },
+    "../foo.js": Object {
+      "dependencies": Object {},
+      "integrity": "sha384-TA6OPoLSABbGGyrDx1Al7pxHP8hQF8Xlicz4+ZhTQ1oZQFdRtkKPLmMovCgztftC",
+    },
+  },
+}
+`;
+
+exports[`E2E Snapshot: fixtures/with-builtin-module 1`] = `
+Object {
+  "resources": Object {
+    "../../../package.json": Object {
+      "integrity": "sha384-caD3G/oidzeDBY6lgIcKZcjvTywDHi+LPGICbkMwiJVmtddYYWrCMV4CvkomWDw/",
+    },
+    "../entry.js": Object {
+      "dependencies": Object {
+        "crypto": true,
+        "fs": true,
+        "path": true,
+        "zlib": true,
+      },
+      "integrity": "sha384-bGSMKUIryN9WBtzKCdh/lxAazUSDPMpI++2psUBviYxA09GxK6EKF8E//PGH91gy",
+    },
+  },
+}
+`;
+
+exports[`E2E Snapshot: fixtures/with-nested-require 1`] = `
+Object {
+  "resources": Object {
+    "../../../package.json": Object {
+      "integrity": "sha384-caD3G/oidzeDBY6lgIcKZcjvTywDHi+LPGICbkMwiJVmtddYYWrCMV4CvkomWDw/",
+    },
+    "../a.js": Object {
+      "dependencies": Object {
+        "./b": "../b.js",
+      },
+      "integrity": "sha384-27hwvFL0g1cSlpwuzwkapXAw1ojKWvWwMRnCSSfTdkL0OkUoZivotXG6pX76xh6W",
+    },
+    "../b.js": Object {
+      "dependencies": Object {
+        "./c": "../c.js",
+      },
+      "integrity": "sha384-uAgDhBvyptalrOJtz8jHcciHhGU90lhLUEB3efVmkfCby9jenrjZ86QR+w/tSIcE",
+    },
+    "../c.js": Object {
+      "dependencies": Object {},
+      "integrity": "sha384-TA6OPoLSABbGGyrDx1Al7pxHP8hQF8Xlicz4+ZhTQ1oZQFdRtkKPLmMovCgztftC",
+    },
+    "../entry.js": Object {
+      "dependencies": Object {
+        "./a": "../a.js",
+      },
+      "integrity": "sha384-GRgy8p/cvLQPQE1pDAU+eTrxbZA6FOqsEzotrduiIkBMXuktUtJ61+mR2A6YW/Za",
+    },
+  },
+}
+`;
