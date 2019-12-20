@@ -1,7 +1,7 @@
 {
   "name": "gen-policy",
   "description": "Node.js Policies generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./dist/index.js",
   "bin": "./dist/cli/index.js",
   "author": "Leko (https://github.com/Leko)",
